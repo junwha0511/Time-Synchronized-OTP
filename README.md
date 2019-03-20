@@ -1,2 +1,2 @@
-# Time-Synchronized-OTP-using-ECC-
+# Time-Synchronized OTP
 Time Synchronized OTP using ECC
