@@ -1,9 +1,8 @@
 from flask import Flask, g
 from flask import Flask, flash, redirect, render_template, request, session, abort
-import os
 import time #시간 api import
-from time import sleep
 import hashlib
+import os
 
 app = Flask(__name__)
 
