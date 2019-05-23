@@ -22,14 +22,12 @@ def before_request():
 	userNum = "001"
 
 	#연도+날짜+시간
-	t = time.strftime("%Y%m%d%I",time.gmtime(time.time()))  
+	t = time.strftime("%Y%m%d%M",time.gmtime(time.time()))  
 
 	#9자리 고유키
 	key = userNum+t
 
 	result = key
-	#시간   
-	h = time.gmtime(time.time()).tm_hour
 
 	hashSHA.update(key.encode())
 
