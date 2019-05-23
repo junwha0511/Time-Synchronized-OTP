@@ -20,8 +20,8 @@ h = time.gmtime(time.time()).tm_hour
 hashSHA.update(key.encode())
 
 #인코딩 함수
-def encodeN(key, n):
-    for i in range(n-1):
+def encodeN(key):
+    for i in range(9):
         hashSHA.update(hashSHA.hexdigest().encode())
     return hashSHA.hexdigest()[0:7]
 
@@ -31,7 +31,7 @@ def renew():
     h = time.gmtime(time.time()).tm_hour
     t = time.strftime("%Y%m%d%I",time.gmtime(time.time()))
     key = userNum+t
-    result = encodeN(key,10)
+    result = encodeN(key)
 renew()
 #메인
 while 1:
@@ -39,4 +39,5 @@ while 1:
     if h != time.gmtime    (time.time()).tm_hour:
         renew()
     print(result)
+    
     
